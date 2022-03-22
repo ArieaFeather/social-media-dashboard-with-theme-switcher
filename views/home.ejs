@@ -1,0 +1,70 @@
+<%-include("partials/_header")%>
+<div class="container">
+    <div class="section section--1">
+        <h1 class="header header--primary">
+            Social Media Dashboard
+        </h1>
+        <h3 class="header header--tertiary">
+            Total Followers: 23,004
+        </h3>
+        <hr>
+        <div class="btn">
+            <p class="btn-label">Dark Mode</p>
+            <label class="switch">
+                <input type="checkbox" id="darktoggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+        <!-- Start of Main Dashboard -->
+        <div class="dashboard dashboard-main">
+            <% for(let i = 0; i < newItems.dashboardItems.length ;i++){ %>
+            <div class="dashboard--item dashboard--item-<%= newItems.dashboardItems[i].abrv%>">
+                <h3 class="header header--tertiary">
+                    <img src="<%= newItems.dashboardItems[i].image %>" alt="<%= newItems.dashboardItems[i].name %> Logo"
+                        class="smicon">
+                    <%= newItems.dashboardItems[i].user %>
+                </h3>
+                <h1 class="stat stat--main"><%= newItems.dashboardItems[i].statMain %></h1>
+                <p class="stat stat--type"><%= newItems.dashboardItems[i].statType %></p>
+                <p class="stat stat--reflection <%= newItems.dashboardItems[i].reflectionClassMain %>">
+
+
+                    <%= newItems.dashboardItems[i].statReflection %></p>
+            </div>
+            <% } %>
+        </div>
+        <!-- End of Main Dashboard -->
+    </div>
+    <!-- End Section 1 -->
+    <!-- Start Section 2 -->
+    <div class="section section--2">
+        <h2 class="header header--secondary">
+            Overview - Today
+        </h2>
+        <div class="dashboard">
+            <%  for(let i = 0; i < newItems.dashboardItems.length ;i++){ %>
+
+            <div class="dashboard--item dashboard--secondary">
+                <h3 class="header header--tertiary"><%= newItems.dashboardItems[i].statTypeSecondary %></h3>
+                <img src="<%= newItems.dashboardItems[i].image %>" alt="<%= newItems.dashboardItems[i].name %> Logo"
+                    class="smicon">
+                <h1 class="stat stat--secondary"><%= newItems.dashboardItems[i].statSecondary %></h1>
+                <p class="stat--reflection <%= newItems.dashboardItems[i].reflectionClassSecondary %>">
+                    <%= newItems.dashboardItems[i].statReflectionSecondary %>
+                </p>
+            </div>
+            <div class="dashboard--item dashboard--secondary">
+                <h3 class="header header--tertiary"><%= newItems.dashboardItems[i].statTypeTertiary %></h3>
+                <img src="<%= newItems.dashboardItems[i].image %>" alt="<%= newItems.dashboardItems[i].name %> Logo"
+                    class="smicon">
+                <h1 class="stat stat--secondary"><%= newItems.dashboardItems[i].statTertiary %></h1>
+                <p class="stat--reflection <%= newItems.dashboardItems[i].reflectionClassTertiary %>">
+                    <%= newItems.dashboardItems[i].statReflectionTertiary %>
+                </p>
+            </div>
+
+            <% } %>
+        </div>
+    </div>
+</div>
+<%-include("partials/_footer")%>

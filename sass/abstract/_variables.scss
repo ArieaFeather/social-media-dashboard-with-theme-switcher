@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+//BREAKPOINTS
+/*
+    Desktop: 1440px
+    Tablet:  770px
+    Mobile: 375px
+    Mobile-sm: 325px
+*/
+$bp-desktop: 1440px;
+$bp-tablet: 770px;
+$bp-mobile: 425px;
+$bp-mobile-sm: 325px;
+
+//COLORS
+$color-primary-1: #1db489; //Lime Green
+$color-primary-2: #dc414c; //Bright REd
+$color-fb: #198ff5; //Facebook
+$color-tw: #1ca0f2; //Twitter
+$color-inst: linear-gradient(to left, #fdc468, #df4996); //Instagram
+$color-yt: #c4032a; //Youtube
+
+//LIGHT THEME
+$color-light-bg: #ffffff;
+$color-light-top-bg-pattern: #f5f7ff;
+$color-light-card-bg: #f0f2fa;
+$color-light-text-1: #63687e;
+$color-light-text-2: #1e202a;
+
+//DARK THEME
+$color-dark-bg: #1e202a;
+$color-dark-top-bg-pattern: #1f212e;
+$color-dark-card-bg: #252a41;
+$color-dark-text-1: #8b97c6;
+$color-dark-text-2: #ffffff;
+
+//TOGGLE THEME
+$toggle-light: #aeb3cb;
+$toggle-dark: linear-gradient(to right, #378fe6, #3eda82);
+
+//FONTS
+$default-font-size: 14px;
+$default-font-family: "Inter", sans-serif;
+$font-weight-sm: 400;
+$font-weight-md: 700;

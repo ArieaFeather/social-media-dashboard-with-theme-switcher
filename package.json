@@ -1,0 +1,33 @@
+{
+    "name": "social-media-dashboard-with-theme-switcher-master",
+    "version": "1.0.0",
+    "description": "Frontend Mentor Challenge",
+    "main": "app.js",
+    "scripts": {
+        "test": "Working",
+        "nodemon": "nodemon",
+        "watch:sass": "sass --watch sass/main.scss public/style.css",
+        "missionstart": "run-p nodemon watch:sass",
+        "compile:sass": "sass sass/main.scss public/style.css",
+        "concat:css": "concat -o public/style.concat.css public/style.css",
+        "prefix:css": "postcss public/style.concat.css --use autoprefixer -o public/style.prefix.css",
+        "compress:css": "sass public/style.prefix.css public/style.css --style compressed",
+        "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+    },
+    "author": "Leon Smith Jr",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "jquery": "^3.6.0",
+        "postcss-cli": "^9.0.2"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.0",
+        "concat": "^1.0.3",
+        "npm-run-all": "^4.1.5",
+        "postcss": "^8.3.11",
+        "sass": "^1.43.4"
+    }
+}
