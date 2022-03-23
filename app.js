@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -12,6 +13,11 @@ app.get("/", (req, res) => {
     res.render("home", { newItems: items });
 });
 
-app.listen(8080, () => {
-    console.log("Press [X] to Start");
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 3000;
+}
+
+app.listen(port, () => {
+    console.log("Quest Started!");
 });
