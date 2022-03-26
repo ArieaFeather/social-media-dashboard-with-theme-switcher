@@ -24,7 +24,7 @@
 hr {
   visibility: hidden;
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   hr {
     visibility: visible;
   }
@@ -133,7 +133,7 @@ hr {
   align-items: center;
   color: #63687e;
 }
-@media (max-width: 425px) {
+@media (max-width: 500px) {
   .btn {
     position: relative;
     align-items: center;
